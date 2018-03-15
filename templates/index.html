@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>FHIR Demo</h1>
+        <!--Display the data from the patient resource, passed in as "pat"-->
+        <p>
+            {% block pat %}{{ pat|safe }}{% endblock %}
+        </p>
+        <!--Display the data from the observation resource, passed in as "obs"-->
+        <p>
+            {% block obs %}{{ obs }}{% endblock %}
+        </p>
+        <!--A link to initiate the HTT test-->
+        <a href='/results'>Order <i>HTT</i> test</a></br></br>
+        <!--Display the results of the HTT test, passed in as "seq"-->
+        <p>
+            {% block seq %}{{ seq }}{% endblock %}
+        </p>
+    </body>
+</html>
